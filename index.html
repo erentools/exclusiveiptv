@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive IPTV - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Exclusive IPTV</h1>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+        <a href="registro.html" class="register-link">Registrarse</a>
+    </div>
+    <script>
+        function login() {
+            var user = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+            if (user.length > 6 && pass.length > 6) {
+                window.location.href = "https://www.cinecalidad.ec/";
+            } else {
+                alert("Usuario y contraseña deben tener más de 6 caracteres.");
+            }
+        }
+    </script>
+</body>
+</html>
